@@ -3,8 +3,8 @@ const baseUrl = '';
 async function getBrewery(url) {
 	try {
 		document.querySelector('#loadingGif').innerHTML += `
-    <img class="loadingGif" src="https://hackernoon.com/images/0*4Gzjgh9Y7Gu8KEtZ.gif">
-  `;
+    		<img class="loadingGif" src="https://hackernoon.com/images/0*4Gzjgh9Y7Gu8KEtZ.gif">
+ 		 `;
 		const response = await fetch('https://api.openbrewerydb.org/breweries');
 		const jsonResult = await response.json();
 		const res = jsonResult;
