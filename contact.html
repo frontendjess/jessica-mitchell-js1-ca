@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Form validation</title>
+		<link rel="stylesheet" type="text/css" href="css/contact.css" />
+	</head>
+	<body>
+		<div id="alert"></div>
+		<main>
+			<h1>Contact us</h1>
+			<div class="form_div">
+				<form>
+					<div class="form_child">
+						<label for="firstname">First Name</label>
+						<input
+							type="text"
+							name="firstname"
+							id="firstname"
+							class="contactform"
+						/>
+						<p class="error firstNameError">Please enter a first name</p>
+					</div>
+
+					<div class="form_child">
+						<label for="subject">Subject</label>
+						<input
+							type="text"
+							name="subject"
+							id="subject"
+							class="contactform"
+						/>
+						<p class="error subjectError">Leave a message</p>
+					</div>
+
+					<div class="form_child">
+						<label for="email">Email</label>
+						<input type="text" name="email" id="email" class="contactform" />
+						<p class="error emailError">Please enter a valid email</p>
+					</div>
+
+					<div class="form_child">
+						<label for="address">Address</label>
+						<input
+							type="text"
+							name="address"
+							id="address"
+							class="contactform"
+						/>
+						<p class="error addressError">Please enter your address</p>
+					</div>
+
+					<button id="submit" class="contactform">Submit</button>
+				</form>
+				<div class="goback"></div>
+			</div>
+		</main>
+
+		<script src="js/contact.js"></script>
+	</body>
+</html>
