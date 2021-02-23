@@ -2,7 +2,7 @@
 const submit = document.querySelector('#submit');
 
 // target error messages
-const firstNameError = document.querySelector('.firstNameError');
+const nameError = document.querySelector('.nameError');
 const subjectError = document.querySelector('.subjectError');
 const emailError = document.querySelector('.emailError');
 const addressError = document.querySelector('.addressError');
@@ -11,16 +11,16 @@ const addressError = document.querySelector('.addressError');
 submit.onclick = function (event) {
 	event.preventDefault();
 	console.log('i ran');
-	const firstName = document.querySelector('#firstname').value.trim();
+	const name = document.querySelector('#name').value.trim();
 	const subject = document.querySelector('#subject').value;
 	const email = document.querySelector('#email').value.trim();
 	const address = document.querySelector('#address').value;
-	if (testLen(firstName, 1)) {
-		firstNameError.classList.add('hide');
-		firstNameError.classList.remove('show');
+	if (testLen(name, 1)) {
+		nameError.classList.add('hide');
+		nameError.classList.remove('show');
 	} else {
-		firstNameError.classList.add('show');
-		firstNameError.classList.remove('hide');
+		nameError.classList.add('show');
+		nameError.classList.remove('hide');
 	}
 
 	if (subject.length >= 10) {
@@ -39,7 +39,7 @@ submit.onclick = function (event) {
 		emailError.classList.remove('hide');
 	}
 
-	if (testLen(address, 20)) {
+	if (testLen(address, 25)) {
 		addressError.classList.add('hide');
 		addressError.classList.remove('show');
 	} else {
@@ -47,16 +47,16 @@ submit.onclick = function (event) {
 		addressError.classList.remove('hide');
 	}
 
-	const firstNameValue = document.querySelector('#firstname').value;
+	const nameValue = document.querySelector('#name').value;
 
 	if (
-		testLen(firstName, 1) &&
+		testLen(name, 1) &&
 		testLen(subject, 10) &&
 		validateEmail(email) &&
-		testLen(address, 20)
+		testLen(address, 25)
 	) {
 		document.querySelector('.formValidated').innerHTML += `
-			Thank you ${firstNameValue}. We will shortly get back to you.
+			Thank you ${nameValue}. We will shortly get back to you.
 		`;
 	}
 };
