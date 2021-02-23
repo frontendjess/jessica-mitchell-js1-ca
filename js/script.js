@@ -24,8 +24,9 @@ async function getBrewery(url) {
 			document.querySelector('main').innerHTML += `
         		<div class="card">
             		<div class="card__body">
-                		<p class="card__desc">Brewery: ${res[i].name}</p>
+                		<p class="card__desc brewery__name">Brewery: ${res[i].name}</p>
                 		<p class="card__desc ${breweryTypeClass}">Brewery type: ${res[i].brewery_type}</p>
+						<p class="card__desc">Phone #: ${res[i].phone}</p>
                 		<p><a class="link" href="details.html?id=${res[i].id}">Read More</a></p>
             		</div>
         		</div>

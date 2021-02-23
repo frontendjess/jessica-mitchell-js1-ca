@@ -69,3 +69,7 @@ h2 {
 .regionalClass {
 	color: red;
 }
+
+.brewery__name {
+	font-weight: bold;
+}
