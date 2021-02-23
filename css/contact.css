@@ -25,6 +25,15 @@ h1 {
 	padding: 25px;
 }
 
+main a {
+	color: white;
+	text-decoration: none;
+}
+
+main a:hover {
+	color: black;
+}
+
 .error {
 	color: red;
 	display: none;
