@@ -7,7 +7,7 @@ const subjectError = document.querySelector('.subjectError');
 const emailError = document.querySelector('.emailError');
 const addressError = document.querySelector('.addressError');
 
-// onclick event
+// onclick event + level 2 completed
 submit.onclick = function (event) {
 	event.preventDefault();
 	console.log('i ran');
@@ -79,8 +79,3 @@ function testLen(elm, len) {
 document.querySelector('.goback').innerHTML += `
 	<p><a class="link" href="index.html">Return to main</a></p>
 `;
-
-// validation
-document.querySelector('#form').onsubmit = function () {
-	event.preventDefault();
-};
