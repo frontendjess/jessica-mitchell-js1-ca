@@ -39,12 +39,25 @@ submit.onclick = function (event) {
 		emailError.classList.remove('hide');
 	}
 
-	if (testLen(address, 25)) {
+	if (testLen(address, 20)) {
 		addressError.classList.add('hide');
 		addressError.classList.remove('show');
 	} else {
 		addressError.classList.add('show');
 		addressError.classList.remove('hide');
+	}
+
+	const firstNameValue = document.querySelector('#firstname').value;
+
+	if (
+		testLen(firstName, 1) &&
+		testLen(subject, 10) &&
+		validateEmail(email) &&
+		testLen(address, 20)
+	) {
+		document.querySelector('.formValidated').innerHTML += `
+			Thank you ${firstNameValue}. We will shortly get back to you.
+		`;
 	}
 };
 
@@ -66,3 +79,8 @@ function testLen(elm, len) {
 document.querySelector('.goback').innerHTML += `
 	<p><a class="link" href="index.html">Return to main</a></p>
 `;
+
+// validation
+document.querySelector('#form').onsubmit = function () {
+	event.preventDefault();
+};
