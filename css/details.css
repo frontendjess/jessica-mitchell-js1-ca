@@ -20,13 +20,13 @@ main {
 	margin: 50px auto;
 }
 
-main a {
+.card a {
 	color: #00ccff;
 	text-decoration: none;
 	border-bottom: solid 1px #00ccff;
 }
 
-main a:hover {
+.card a:hover {
 	color: black;
 	border-bottom: solid 1px black;
 }
