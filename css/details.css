@@ -63,3 +63,19 @@ main {
 	width: 100%;
 	height: 40px;
 }
+
+.microClass {
+	color: blue;
+}
+
+.contractClass {
+	color: green;
+}
+
+.brewpubClass {
+	color: hotpink;
+}
+
+.regionalClass {
+	color: red;
+}

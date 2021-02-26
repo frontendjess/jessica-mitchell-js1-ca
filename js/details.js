@@ -20,10 +20,21 @@ async function getBrewery(breweryId) {
 			<h1>Brewery Info</h1>
 			`;
 
+		let breweryTypeClass = '';
+		if (breweryInfo.brewery_type === 'micro') {
+			breweryTypeClass = 'microClass';
+		} else if (breweryInfo.brewery_type === 'contract') {
+			breweryTypeClass = 'contractClass';
+		} else if (breweryInfo.brewery_type === 'brewpub') {
+			breweryTypeClass = 'brewpubClass';
+		} else {
+			breweryTypeClass = 'regionalClass';
+		}
+
 		document.querySelector('h2').innerHTML = `${breweryInfo.name}`;
 		document.querySelector('.desc').innerHTML = `
       		<div class="card">
-        	<p>Brewery type: ${breweryInfo.brewery_type}</p>
+        	<p class="${breweryTypeClass}">Brewery type: ${breweryInfo.brewery_type}</p>
         	<p>Location: ${breweryInfo.city}, ${breweryInfo.state}</p>
         	<p>Website: <a href="${breweryInfo.website_url}" target="_blank">${breweryInfo.website_url}</p>
       		</div>
