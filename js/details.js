@@ -5,8 +5,8 @@ const id = params.get('id');
 async function getBrewery(breweryId) {
 	try {
 		document.querySelector('#loadingGif').innerHTML += `
-      <img class="loadingGif" src="https://hackernoon.com/images/0*4Gzjgh9Y7Gu8KEtZ.gif">
-    `;
+      		<img class="loadingGif" src="https://hackernoon.com/images/0*4Gzjgh9Y7Gu8KEtZ.gif">
+    		`;
 
 		console.log(breweryId);
 		const response = await fetch(
@@ -16,18 +16,21 @@ async function getBrewery(breweryId) {
 		const breweryInfo = jsonResult;
 
 		document.title = breweryInfo.name;
+		document.querySelector('header').innerHTML += `
+			<h1>Brewery Info</h1>
+			`;
 
-		document.querySelector('h1').innerHTML = `${breweryInfo.name}`;
+		document.querySelector('h2').innerHTML = `${breweryInfo.name}`;
 		document.querySelector('.desc').innerHTML = `
-      <div class="card">
-        <p>Brewery type: ${breweryInfo.brewery_type}</p>
-        <p>Location: ${breweryInfo.city}, ${breweryInfo.state}</p>
-        <p>Website: <a href="${breweryInfo.website_url}" target="_blank">${breweryInfo.website_url}</p>
-      </div>
-        `;
+      		<div class="card">
+        	<p>Brewery type: ${breweryInfo.brewery_type}</p>
+        	<p>Location: ${breweryInfo.city}, ${breweryInfo.state}</p>
+        	<p>Website: <a href="${breweryInfo.website_url}" target="_blank">${breweryInfo.website_url}</p>
+      		</div>
+        	`;
 		document.querySelector('.goBack').innerHTML += `
-        <a href="index.html">Back to list</a>
-      `;
+        	<a href="index.html">Back to list</a>
+      	`;
 	} catch (error) {
 		document.querySelector('#alert').innerHTML = showAlertTouser(
 			'An Error occured',

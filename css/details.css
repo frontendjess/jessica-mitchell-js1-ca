@@ -9,8 +9,9 @@ body {
 	font-family: 'Montserrat', sans-serif;
 }
 
-.loadingGif {
-	width: 350px;
+header {
+	text-align: center;
+	padding-top: 50px;
 }
 
 main {
@@ -18,6 +19,10 @@ main {
 	width: 500px;
 	padding: 25px;
 	margin: 50px auto;
+}
+
+.loadingGif {
+	width: 350px;
 }
 
 .card a {
