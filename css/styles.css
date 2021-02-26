@@ -26,9 +26,13 @@ main a:hover {
 	color: black;
 }
 
-h1,
-h2 {
+h1 {
 	padding: 25px;
+	text-align: center;
+}
+
+h2 {
+	padding: 0 25px 25px 25px;
 	text-align: center;
 }
 
